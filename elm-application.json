@@ -1,0 +1,8 @@
+{
+    "name": "TheSacredLipton/elm-ui-hexcolor",
+    "summary": "Offline documentation previewer",
+    "version": "0.0.1",
+    "exposed-modules": [
+        "Element.HexColor"
+    ]
+}
