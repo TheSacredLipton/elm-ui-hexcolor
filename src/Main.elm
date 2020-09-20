@@ -1,11 +1,3 @@
-# elm-ui-hexcolor
-
-Add hex color declarations to elm-ui.
-
-
-## Example
-
-```elm
 module Main exposing (view)
 
 import Element exposing (..)
@@ -36,4 +28,3 @@ view =
         , bgColor "#212121"
         ]
         none
-```
