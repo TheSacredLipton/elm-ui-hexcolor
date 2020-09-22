@@ -162,6 +162,9 @@ hexBasicTest =
         , test "Sharp test" <|
             \_ ->
                 hex "#FFFFFF" |> Expect.equal (Just <| rgba 1 1 1 1)
+        , test "Nothing test" <|
+            \_ ->
+                hex "FFF" |> Expect.equal Nothing
         ]
 
 

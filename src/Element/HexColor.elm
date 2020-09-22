@@ -53,7 +53,19 @@ sixCharacterFilter s =
 {- exposing -}
 
 
-{-| -}
+{-|
+
+    hexa ( "000000", 0 ) -- Just (rgba 0 0 0 0)
+
+    hexa ( "FFFFFF", 1 ) -- Just (rgba 1 1 1 1)
+
+    hexa ( "#FFFFFF", 0 ) -- Just (rgba 1 1 1 0)
+
+    hexa ( "FFFFFF", 10 ) -- Nothing
+
+    hexa ( "FFFFFF", -1 ) -- Nothing
+
+-}
 hexa : ( String, Float ) -> Maybe Color
 hexa ( color, alpha ) =
     if alpha <= 1 && alpha >= 0 then
@@ -68,7 +80,19 @@ hexa ( color, alpha ) =
         Nothing
 
 
-{-| -}
+{-|
+
+    hex "000000" -- Just (rgba 0 0 0 1)
+
+    hex "000000" -- Just (rgba 0 0 0 1)
+
+    hex "FFFFFF" -- Just (rgba 1 1 1 1)
+
+    hex "#FFFFFF" -- Just (rgba 1 1 1 1)
+
+    hex "FFF" -- Nothing
+
+-}
 hex : String -> Maybe Color
 hex color =
     hexa <| ( color, 1 )
