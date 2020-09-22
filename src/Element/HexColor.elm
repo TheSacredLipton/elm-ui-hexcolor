@@ -40,6 +40,15 @@ rgb list index =
         |> Maybe.withDefault 0
 
 
+sixCharacterFilter : String -> String
+sixCharacterFilter s =
+    if String.length s == 6 then
+        s
+
+    else
+        ""
+
+
 
 {- exposing -}
 
@@ -47,11 +56,16 @@ rgb list index =
 {-| -}
 hexa : ( String, Float ) -> Maybe Color
 hexa ( color, alpha ) =
-    String.filter (\a -> a /= '#') color
-        |> String.toUpper
-        |> Base16.decode
-        |> Result.withDefault []
-        |> hexaHelper alpha
+    if alpha <= 1 && alpha >= 0 then
+        String.filter (\a -> a /= '#') color
+            |> sixCharacterFilter
+            |> String.toUpper
+            |> Base16.decode
+            |> Result.withDefault []
+            |> hexaHelper alpha
+
+    else
+        Nothing
 
 
 {-| -}

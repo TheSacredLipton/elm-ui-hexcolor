@@ -4,7 +4,7 @@
   "description": "TheSacredLipton",
   "main": "index.js",
   "scripts": {
-    "test": "elm-test",
+    "test": "elm-test --fuzz 100",
     "edp": "edp -b -p 8080",
     "update": "npx ncu -u && npm update"
   },
