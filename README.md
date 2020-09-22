@@ -1,5 +1,7 @@
 # elm-ui-hexcolor
 
+![](https://github.com/TheSacredLipton/elm-ui-hexcolor/workflows/Node.js%20CI/badge.svg)
+
 Add hex color declarations to elm-ui.
 
 ## Example
