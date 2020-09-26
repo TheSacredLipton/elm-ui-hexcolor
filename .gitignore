@@ -2,3 +2,6 @@ elm-stuff
 node_modules
 .cache
 dist
+
+/examples/src/**/*
+!/examples/src/*.elm
