@@ -13,6 +13,7 @@
         "elm-community/list-extra": "8.2.4 <= v < 9.0.0",
         "elm-community/result-extra": "2.4.0 <= v < 3.0.0",
         "mdgriffith/elm-ui": "1.1.5 <= v < 2.0.0",
+        "elm/html": "1.0.0 <= v < 2.0.0",
         "waratuman/elm-coder": "3.0.1 <= v < 4.0.0"
     },
     "test-dependencies": {
